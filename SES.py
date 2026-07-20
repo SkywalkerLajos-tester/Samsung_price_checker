@@ -75,6 +75,8 @@ class TestPriceCheckSES: ###########################   ÁTÍRNI   ##############
         datasheet = self.browser.find_element(By.XPATH, "(//a[@href='/product/samsung-sm-s948ds-black-s26-ultra-dual-esim-512gb'])[1]")
         datasheet.click()
 
+        self.browser.execute_script("window.scrollBy(0, 240);")
+
         eredeti_ar = self.browser.find_element(By.XPATH, "//span[@class='text-gray-400 line-through text-lg mr-3']")
         print(f'\n Eredeti ár: {eredeti_ar.text}')
         levagott_eredeti_ar = int(eredeti_ar.text.replace(" ", "").replace("Ft", "").strip())

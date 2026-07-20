@@ -8,7 +8,7 @@ from POM_SES_price_check.page_models.main_page import SES
 from POM_SES_price_check.page_models.login_page import LoginPage
 from POM_SES_price_check.page_models.logged_in_page import LoggedIn
 from POM_SES_price_check.page_models.selection_result_page import SelectedItem
-from POM_SES_price_check.page_models.S26Ultra_item_page import S26Ultra
+#from POM_SES_price_check.page_models.S26Ultra_item_page import S26Ultra
 from POM_SES_price_check.create_driver import get_configured_chrome_driver
 
 URL = "https://ses.hu/"
@@ -22,7 +22,7 @@ class TestPriceCheck:
         self.login_page = LoginPage(self.browser, URL)
         self.logged_in_page = LoggedIn(self.browser, URL)
         self.selection_result_page = SelectedItem(self.browser, URL)
-        self.S26Ultra_item_page = S26Ultra(self.browser, URL)
+        #self.S26Ultra_item_page = S26Ultra(self.browser, URL)
 
     # def teardown_method(self):
     #     self.main_page.close_browser()
