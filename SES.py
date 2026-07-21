@@ -61,13 +61,13 @@ class TestPriceCheckSES: ###########################   ÁTÍRNI   ##############
         galaxy_s = self.browser.find_element(By.XPATH, "(//span[normalize-space()='Galaxy S széria'])[1]")
         galaxy_s.click()
 
-        s26_ultra = self.browser.find_element(By.XPATH, "//div/input[@value='88']")
+        s26_ultra = self.browser.find_element(By.XPATH, "//label[text()='Galaxy S26 Ultra']/../input")
         s26_ultra.click()
 
-        color = self.browser.find_element(By.XPATH, "//div/label/input[@value='45']")
+        color = self.browser.find_element(By.XPATH, "//span/span[text()='Fekete és árnyalatai']/../../input")
         self.browser.execute_script("arguments[0].click();", color)
 
-        size = self.browser.find_element(By.XPATH, "//div/label/input[@value='15']")
+        size = self.browser.find_element(By.XPATH, "//label/span[text()='512 GB']/../input")
         size.click()
 
         self.browser.execute_script("window.scrollBy(0, 205);")
@@ -75,7 +75,7 @@ class TestPriceCheckSES: ###########################   ÁTÍRNI   ##############
         datasheet = self.browser.find_element(By.XPATH, "(//a[@href='/product/samsung-sm-s948ds-black-s26-ultra-dual-esim-512gb'])[1]")
         datasheet.click()
 
-        self.browser.execute_script("window.scrollBy(0, 240);")
+        self.browser.execute_script("window.scrollBy(0, 230);")
 
         eredeti_ar = self.browser.find_element(By.XPATH, "//span[@class='text-gray-400 line-through text-lg mr-3']")
         print(f'\n Eredeti ár: {eredeti_ar.text}')
