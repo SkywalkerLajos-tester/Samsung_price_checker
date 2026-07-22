@@ -10,7 +10,7 @@ from selenium.webdriver.support.select import Select
 class LoggedIn(GeneralPage):
     def __init__(self, browser, URL):
         super().__init__(browser, URL)
-        self.wait = WebDriverWait(self.browser, 5)
+        self.wait = WebDriverWait(self.browser, 10)
 
     def button_user(self):
         return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//span[@class='max-w-[160px] truncate']")))
@@ -22,10 +22,10 @@ class LoggedIn(GeneralPage):
         return self.wait.until(EC.element_to_be_clickable((By.XPATH, "(//span[normalize-space()='Galaxy S széria'])[1]")))
 
     def s26_ultra(self):
-        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div/input[@value='88']")))
+        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//label[text()='Galaxy S26 Ultra']/../input")))
 
     def color(self):
-        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div/label/input[@value='45']")))
+        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//span/span[text()='Fekete és árnyalatai']/../../input")))
 
     def size(self):
-        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div/label/input[@value='15']")))
+        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//label/span[text()='512 GB']/../input")))

@@ -1,7 +1,5 @@
 import pytest
 import time
-import json
-import time
 import os
 import datetime
 import csv

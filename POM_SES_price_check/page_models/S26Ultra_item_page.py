@@ -12,3 +12,10 @@ class S26Ultra(GeneralPage):
         self.wait = WebDriverWait(self.browser, 5)
 
     def eredeti_ar(self):
+        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//span[@class='text-gray-400 line-through text-lg mr-3']")))
+
+    def akcios_ar(self):
+        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@class='text-[32px] font-bold mb-4 tracking-tight']")))
+
+    def torzsvasarloi_ar(self):
+        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@class='mt-1 text-3xl font-bold text-emerald-700']")))
