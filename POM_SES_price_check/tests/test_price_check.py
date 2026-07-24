@@ -25,8 +25,8 @@ class TestPriceCheck:
         self.selection_result_page = SelectedItem(self.browser, URL)
         self.S26Ultra_item_page = S26Ultra(self.browser, URL)
 
-    # def teardown_method(self):
-    #     self.main_page.close_browser()
+    def teardown_method(self):
+        self.main_page.close_browser()
 
 
     def mentes_csv_fajlba(self, eredeti_ar, akcios_ar, torzsvasarloi_ar):

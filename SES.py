@@ -30,8 +30,8 @@ class TestPriceCheckSES: ###########################   ÁTÍRNI   ##############
         self.browser.get(URL)
 
     ################################   VISSZATENNI A VÉGÉN  ###################################################
-    # def teardown_method(self):
-    #     self.browser.close()
+    def teardown_method(self):
+        self.browser.close()
     ################################   VISSZATENNI A VÉGÉN  ###################################################
 
     def test_TC01(self):
